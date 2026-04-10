@@ -11,36 +11,47 @@ body {
 .wrapper {
     width: 400px;
 
+    display: grid;
 }
 
-.calculator-screen {
-    background-color: black;
-    height: 10px;
-}
 
-.calculator-buttons div {
-    display: flex;
-    flex-direction: row;
-}
-/*
 .calculator-screen {
     background-color:black;
 
     grid-row: 1 / 2;
     grid-column: 1 / 4;
 
+    height: 67px;
+
+}
+.screen {
+    color:white;
+    text-align:right;
+
+    margin-top: 20px;
+    margin-right: 40px;
+
+    font-size: xx-large;
 }
 .calculator-buttons {
     grid-row: 2 / 7;
     grid-column: 1 / 4;
     
 }
-.calculator-buttons div {
+
+.row {
     display: flex;
     flex-direction: row;
 }
 
-.calculator-buttons div.span-btn {
+button {
+    flex: 1;
+    height: 67px;
+}
+
+.span-btn-c {
     flex: 2;
 }
-*/
+.span-btn-zero {
+    flex: 3;
+}

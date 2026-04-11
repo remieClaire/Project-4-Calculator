@@ -69,10 +69,12 @@ equalsOp.addEventListener('click', ()=>operationsManager());
 // displays number when number btn is pressed
 function displayAndStoreNumber(num) {
     
+    // if not time to get input for num2 & user is not done inputting num1
     if (!storeNum2 && !inputFin1) {
         num1 += num;
         screen.textContent = num1;
     }
+    // else if time to get input for num2 and user is not done inputting num2
     else if (storeNum2 && !inputFin2) {
         num2 += num;
         screen.textContent = num2;
@@ -83,6 +85,7 @@ function displayAndStoreNumber(num) {
 // sets current operation when corresponding button is pressed
 function divide() {
     currOp = 'divide';
+    // if operation btn pressed then we know the first number is done being inputted
     inputFin1 = true;
     storeNum2 = true;
 }
@@ -106,11 +109,13 @@ function add() {
 function operationsManager() {
   let result = 0;
 
+  // num2 is done being inputted
   storeNum2 = false;
   inputFin2 = true;
   
   if (!storeNum2) {
 
+    // based on current operation, do the corresponding one
     switch (currOp) {
       case 'divide':
         // calculate result
@@ -179,14 +184,13 @@ function operationsManager() {
 function deleteVal() {
 
     if (!storeNum2 && !inputFin1) {
+        // create a new substring without the last digit
         num1 = num1.substring(0, num1.length-1);
         screen.textContent = num1;
-        console.log("num1: " + num1);
     }
     else if (storeNum2 && !inputFin2) {
         num2 = num2.substring(0, num2.length-1);
         screen.textContent = num2;
-        console.log("num2: " + num2);
     }
 
 }

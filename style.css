@@ -48,9 +48,21 @@ button {
     flex: 1;
     height: 67px;
 }
+/* on hover, color changes and font gets bigger */
+button:hover {
+    background-color:aliceblue;
+    font-size: 1.1em;
+}
+/* on click, color changes to slightly darker shade and font returns to normal */
+button:active {
+    background-color:rgb(225, 236, 246);
+    font-size:small;
+}
 
 .span-btn-c {
+    /* apply flex to stretch to desired dimensions */
     flex: 2;
+    /* add padding to align */
     padding-right: 22px;
 }
 .span-btn-zero {
